@@ -42,7 +42,6 @@ class myhandler(BaseHTTPRequestHandler):
         self.send_header('content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
-server_address = ('',80)
-httpd = HTTPServer(('localhost',8080),myhandler)
+httpd = HTTPServer(('localhost',8000),myhandler)
 print("my webserver is running...")
 httpd.serve_forever()

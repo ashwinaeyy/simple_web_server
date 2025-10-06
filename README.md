@@ -65,16 +65,15 @@ class myhandler(BaseHTTPRequestHandler):
         self.send_header('content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
-server_address = ('',80)
-httpd = HTTPServer(('localhost',8080),myhandler)
+httpd = HTTPServer(('localhost',8000),myhandler)
 print("my webserver is running...")
 httpd.serve_forever()
 ```
 
-# OUTPUT:
-![alt text](<Screenshot 2025-10-06 112053.png>)
+# OUTPUT:!
+![alt text](<Screenshot 2025-10-06 114057.png>)
 
-![alt text](<Screenshot 2025-10-06 112144.png>)
+![alt text](<Screenshot 2025-10-06 114115.png>)
 
 # RESULT:
 The program for implementing simple webserver is executed successfully.
